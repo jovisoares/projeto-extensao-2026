@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://hyy2ts2ww7k5"]
+
+[ext_resource type="Script" uid="uid://5w4ssu2dw40w" path="res://scenes/game_over.gd" id="1_xeevv"]
+[ext_resource type="LabelSettings" uid="uid://irkqoe2h86xd" path="res://resources/label_settings.tres" id="2_wqhvx"]
+
+[node name="GameOver" type="Control" unique_id=929376053]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1323050263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonRestart" type="Button" parent="." unique_id=1092652564]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 104.0
+offset_right = 178.0
+offset_bottom = 139.0
+text = "Reiniciar"
+
+[node name="Label" type="Label" parent="." unique_id=310363646]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 280.0
+offset_bottom = 80.0
+text = "Perdeu!"
+label_settings = ExtResource("2_wqhvx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonRestart" to="." method="_on_button_restart_pressed"]

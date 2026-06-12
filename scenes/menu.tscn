@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dh8smx2qen1l8"]
+
+[ext_resource type="Script" uid="uid://cohwntrf4gurj" path="res://scenes/menu.gd" id="1_yqeox"]
+[ext_resource type="LabelSettings" uid="uid://irkqoe2h86xd" path="res://resources/label_settings.tres" id="2_vjb58"]
+
+[node name="Menu" type="Control" unique_id=638285259]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="Background" type="ColorRect" parent="." unique_id=413354022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonPlay" type="Button" parent="." unique_id=1426843722]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 104.0
+offset_right = 139.0
+offset_bottom = 135.0
+text = "Jogar"
+
+[node name="ButtonQuit" type="Button" parent="." unique_id=1084853636]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 104.0
+offset_right = 211.0
+offset_bottom = 135.0
+text = "Sair"
+
+[node name="Label" type="Label" parent="." unique_id=1986446558]
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 96.0
+text = "Jogo Incrível"
+label_settings = ExtResource("2_vjb58")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
